@@ -84,7 +84,7 @@ public class ComplexTest {
     }
 
     @Test
-    void testSubstract(){
+    void testSubtract(){
         assertEquals(minusOne, Complex.ZERO.subtract(Complex.ONE));
         assertEquals(oneMinusI, Complex.ONE.subtract(Complex.I));
         assertEquals(new Complex(real-1,imaginary-1),
@@ -154,4 +154,22 @@ public class ComplexTest {
         assertEquals(1.0,c2.getReal());
         assertEquals(-2.0,c2.getImaginary());
     }
+
+    @Test
+    void testsubtract() {
+        Complex c1 = onePlusI.subtract(oneMinusI);
+        Complex c2 = oneMinusI.subtract(minusI);
+        assertEquals(0.0,c1.getReal());
+        assertEquals(2,c1.getImaginary());
+        assertEquals(1.0,c2.getReal());
+        assertEquals(0.0,c2.getImaginary());
+    }
+
+    @Test
+    void testMultiply() {
+        Complex c1 = onePlusI.multiply(oneMinusI);
+        assertEquals(2.0,c1.getReal());
+        assertEquals(0,c1.getImaginary());
+    }
+
 }
