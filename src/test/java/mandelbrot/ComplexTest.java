@@ -172,4 +172,12 @@ public class ComplexTest {
         assertEquals(0,c1.getImaginary());
     }
 
+
+    @Test
+    void testPow() {
+        Complex c1 = onePlusI.pow(3);
+        assertEquals(0,c1.getReal());
+        assertEquals(2,c1.getImaginary());
+    }
+
 }

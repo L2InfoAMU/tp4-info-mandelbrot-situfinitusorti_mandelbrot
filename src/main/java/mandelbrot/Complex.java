@@ -184,7 +184,7 @@ public class Complex {
      * @return the complex number <code>this ** p</code>
      */
 
-    Complex pow(int p){
+   /* Complex pow(int p){
         if(p == 0)
             return ONE;
         Complex resultat = ONE;
@@ -192,8 +192,8 @@ public class Complex {
             resultat.multiply(this);
         }
         return resultat;
-    }
-/* //TODO SI ON A LE TEMPS ON REGARDE
+    } */
+ //TODO SI ON A LE TEMPS ON REGARDE
     Complex pow(int p) {
         if (p == 0)
             return ONE;
@@ -202,7 +202,7 @@ public class Complex {
             result = result.multiply(this);
         return result;
     }
-*/
+
     /**
      * Scalar multiplication of a complex number
      *
