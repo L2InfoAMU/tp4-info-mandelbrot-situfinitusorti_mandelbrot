@@ -183,15 +183,26 @@ public class Complex {
      * @param p a non-negative integer
      * @return the complex number <code>this ** p</code>
      */
+
+    Complex pow(int p){
+        if(p == 0)
+            return ONE;
+        Complex resultat = ONE;
+        for(int i = p; i>0; i--){
+            resultat.multiply(this);
+        }
+        return resultat;
+    }
+/* //TODO SI ON A LE TEMPS ON REGARDE
     Complex pow(int p) {
         if (p == 0)
-            return ZERO;
+            return ONE;
         Complex result = (this.multiply(this)).pow(p / 2);
         if (p % 2 == 1)
             result = result.multiply(this);
         return result;
     }
-
+*/
     /**
      * Scalar multiplication of a complex number
      *
