@@ -144,4 +144,14 @@ public class ComplexTest {
         assertEquals(-real,c2.getReal());
         assertEquals(0.0,c2.getImaginary());
     }
+
+    @Test
+    void testAdd() {
+        Complex c1 = onePlusI.add(oneMinusI);
+        Complex c2 = oneMinusI.add(minusI);
+        assertEquals(2.0,c1.getReal());
+        assertEquals(0,c1.getImaginary());
+        assertEquals(1.0,c2.getReal());
+        assertEquals(-2.0,c2.getImaginary());
+    }
 }
