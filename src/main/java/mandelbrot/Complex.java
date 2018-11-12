@@ -169,7 +169,7 @@ public class Complex {
         if (divisor.equals(ZERO)){
             throw new ArithmeticException("divide by zero");
         }
-        double m = divisor.squaredModulus(); // W = this ; Z = divisor
+        double m = divisor.squaredModulus();
         return new Complex(
                 (this.real * divisor.real + this.imaginary * divisor.imaginary) / m,
                 (this.imaginary * divisor.real - this.real * divisor.imaginary) / m
@@ -183,17 +183,6 @@ public class Complex {
      * @param p a non-negative integer
      * @return the complex number <code>this ** p</code>
      */
-
-   /* Complex pow(int p){
-        if(p == 0)
-            return ONE;
-        Complex resultat = ONE;
-        for(int i = p; i>0; i--){
-            resultat.multiply(this);
-        }
-        return resultat;
-    } */
- //TODO SI ON A LE TEMPS ON REGARDE
     Complex pow(int p) {
         if (p == 0)
             return ONE;
